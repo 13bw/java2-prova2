@@ -24,10 +24,8 @@ public class Questao {
     @Column
     private String enunciado;
 
-    // private Quiz quiz;
-
-    // @OneToMany(mappedBy = "questao")
-    // private Set<Alternativa> alternativas;
+    @OneToMany(mappedBy = "questao")
+    private Set<Alternativa> alternativas;
 
     public Long getId() {
         return id;
@@ -45,12 +43,12 @@ public class Questao {
         this.enunciado = enunciado;
     }
 
-    // public Set<Alternativa> getAlternativas() {
-    //     return alternativas;
-    // }
+    public Set<Alternativa> getAlternativas() {
+        return alternativas;
+    }
 
-    // public void setAlternativas(Set<Alternativa> alternativas) {
-    //     this.alternativas = alternativas;
-    // }
+    public void setAlternativas(Set<Alternativa> alternativas) {
+        this.alternativas = alternativas;
+    }
     
 }
