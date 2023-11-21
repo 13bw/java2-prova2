@@ -26,9 +26,9 @@ public class Alternativa {
     @Column
     private boolean correta;
 
-    @ManyToOne
-    @JoinColumn(name = "questao_id")
-    private Questao questao;
+    // @ManyToOne
+    // @JoinColumn(name = "questao_id")
+    // private Questao questao;
 
     public Long getId() {
         return id;
@@ -54,13 +54,13 @@ public class Alternativa {
         this.correta = correta;
     }
 
-    public Questao getQuestao() {
-        return questao;
-    }
+    // public Questao getQuestao() {
+    //     return questao;
+    // }
 
-    public void setQuestao(Questao questao) {
-        this.questao = questao;
-    }
+    // public void setQuestao(Questao questao) {
+    //     this.questao = questao;
+    // }
 
     
 }

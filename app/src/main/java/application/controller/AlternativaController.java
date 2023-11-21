@@ -75,5 +75,6 @@ public class AlternativaController {
         alternativaRepository.deleteById(id);
         return "redirect:/alternativa/list";
     }
+    
 
 }

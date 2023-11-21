@@ -5,6 +5,8 @@ import java.util.Set;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -16,6 +18,7 @@ import jakarta.persistence.Table;
 public class Questao {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
@@ -23,8 +26,8 @@ public class Questao {
 
     // private Quiz quiz;
 
-    @OneToMany(mappedBy = "questao")
-    private Set<Alternativa> alternativas;
+    // @OneToMany(mappedBy = "questao")
+    // private Set<Alternativa> alternativas;
 
     public Long getId() {
         return id;
@@ -42,20 +45,12 @@ public class Questao {
         this.enunciado = enunciado;
     }
 
-    // public Quiz getQuiz() {
-    //     return quiz;
+    // public Set<Alternativa> getAlternativas() {
+    //     return alternativas;
     // }
 
-    // public void setQuiz(Quiz quiz) {
-    //     this.quiz = quiz;
+    // public void setAlternativas(Set<Alternativa> alternativas) {
+    //     this.alternativas = alternativas;
     // }
-
-    public Set<Alternativa> getAlternativas() {
-        return alternativas;
-    }
-
-    public void setAlternativas(Set<Alternativa> alternativas) {
-        this.alternativas = alternativas;
-    }
     
 }
